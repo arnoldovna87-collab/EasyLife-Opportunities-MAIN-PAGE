@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyLife Opportunities — здоровье, путешествия и новые возможности</title>
+    <meta name="description" content="Выберите своё направление: Health & Wellness или Travel & Cruises. Возможности для развития, путешествий и дополнительного дохода вместе с EasyLife Opportunities.">
+    <meta name="keywords" content="EasyLife Opportunities, дополнительный доход в Европе, возможности онлайн, wellness opportunities, travel opportunities, круизный клуб, путешествия со скидками, wellness-бизнес, онлайн-направление, возможности для женщин, дополнительная занятость, здоровье и путешествия">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="EasyLife Opportunities — здоровье, путешествия и новые возможности">
+    <meta property="og:description" content="Выберите Health или Travel и узнайте, какое направление подходит именно вам.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:url" content="https://arnoldovna87-collab.github.io/EasyLife_Opportunities/">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            milky: '#F7F3ED',
+                            beige: '#EFE7DC',
+                            dark: '#242424',
+                            graphite: '#332D29',
+                            orange: '#F47A3C',
+                            orangeHover: '#E96324',
+                            peach: '#F6B38A',
+                        },
+                        health: {
+                            green: '#A8BFA4',
+                            darkGreen: '#6E826B',
+                            sage: '#DCE6D8',
+                        },
+                        travel: {
+                            blue: '#23445C',
+                            slate: '#91AFC0',
+                            sky: '#DDEBF2',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #F7F3ED;
+            color: #242424;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        .serif-title {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F7F3ED;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #F6B38A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F47A3C;
+        }
+    </style>
+</head>
+<body class="relative">
+
+    <!-- Navigation Header -->
+    <header class="w-full py-6 px-6 md:px-12 flex justify-between items-center bg-transparent absolute top-0 left-0 z-30">
+        <div class="flex flex-col">
+            <span class="text-xl md:text-2xl font-semibold tracking-wider text-brand-dark uppercase">EasyLife</span>
+            <span class="text-[10px] tracking-widest text-brand-orange uppercase -mt-1">Opportunities</span>
+        </div>
+        <nav class="hidden md:flex space-x-8 text-sm font-medium text-brand-graphite">
+            <a href="#about" class="hover:text-brand-orange transition duration-300">О проекте</a>
+            <a href="#for-whom" class="hover:text-brand-orange transition duration-300">Для кого</a>
+            <a href="#directions" class="hover:text-brand-orange transition duration-300">Направления</a>
+            <a href="#founder" class="hover:text-brand-orange transition duration-300">Основатель</a>
+            <a href="#feedback" class="hover:text-brand-orange transition duration-300">Контакты</a>
+        </nav>
+        <button onclick="openChatBot()" class="border border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 shadow-sm">
+            Задать вопрос
+        </button>
+    </header>
+
+    <!-- Block 1. Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 md:px-12 bg-gradient-to-b from-[#F2ECE4] via-[#F7F3ED] to-white overflow-hidden">
+        <!-- Background organic blobs -->
+        <div class="absolute top-1/4 -left-32 w-96 h-96 bg-brand-peach/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 -right-20 w-80 h-80 bg-brand-orange/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
+            <!-- Left Text Content -->
+            <div class="lg:col-span-7 space-y-8 text-left">
+                <span class="text-brand-orange font-semibold uppercase tracking-widest text-xs md:text-sm block">More opportunities. More freedom. More life.</span>
+                <h1 class="serif-title text-5xl md:text-7xl font-bold leading-tight text-brand-dark">
+                    Возможностей больше, <br class="hidden md:block">чем кажется
+                </h1>
+                <p class="text-lg md:text-xl text-brand-graphite font-medium max-w-xl leading-relaxed">
+                    Путешествовать больше. Развиваться. Создавать дополнительный доход. Выбирать направление, которое подходит именно тебе.
+                </p>
+                <p class="text-sm md:text-base text-gray-500 max-w-xl">
+                    EasyLife Opportunities — пространство проверенных возможностей для тех, кто хочет повысить качество жизни, использовать современные инструменты и открыть для себя новые направления.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#directions" class="bg-brand-orange hover:bg-brand-orangeHover text-white px-8 py-4 rounded-2xl text-base font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-center transform hover:-translate-y-0.5">
+                        Выбрать своё направление
+                    </a>
+                    <button onclick="openChatBot()" class="border-2 border-brand-orange text-brand-orange hover:bg-brand-orange/5 px-8 py-4 rounded-2xl text-base font-semibold transition-all duration-300 text-center">
+                        Задать вопрос
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Visual Video (Заменено на ваше видео) -->
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="relative w-full max-w-md h-[450px] md:h-[550px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
+                    <video src="Woman_smiling_on_balcony_202607071304.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-5 rounded-2xl pointer-events-none">
+                        <p class="text-brand-dark text-sm font-semibold">«Твоя жизнь может быть шире привычного сценария»</p>
+                    </div>
+                </div>
+                <!-- Sun Flare Effect -->
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-orange/20 rounded-full blur-2xl animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 2. About the Project -->
+    <section id="about" class="py-24 px-6 md:px-12 bg-white relative">
+        <div class="max-w-7xl mx-auto text-center space-y-16">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <h2 class="serif-title text-4xl md:text-5xl font-semibold text-brand-dark leading-tight">
+                    EasyLife Opportunities — о возможностях, которые можно встроить в свою жизнь
+                </h2>
+                <div class="h-1 w-20 bg-brand-orange mx-auto rounded-full"></div>
+                <p class="text-base md:text-lg text-brand-graphite leading-relaxed">
+                    Не всем нужен новый полноценный рабочий день. Иногда человеку достаточно нескольких свободных часов, правильного направления и понятной системы. 
+                    Кто-то хочет развиваться в сфере здоровья и рекомендаций. Кто-то мечтает путешествовать чаще и выгоднее. Кто-то ищет дополнительный источник дохода. 
+                    Здесь можно выбрать направление, которое соответствует вашему образу жизни, интересам и целям.
+                </p>
+            </div>
+
+            <!-- Three Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-brand-milky p-8 rounded-3xl text-left space-y-4 hover:shadow-md transition duration-300 border border-brand-beige">
+                    <div class="w-12 h-12 bg-brand-orange/10 flex items-center justify-center rounded-2xl text-brand-orange">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="serif-title text-2xl font-semibold text-brand-dark">Рост</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Новые знания, навыки и возможности для личного развития и масштабирования.</p>
+                </div>
+
+                <div class="bg-brand-milky p-8 rounded-3xl text-left space-y-4 hover:shadow-md transition duration-300 border border-brand-beige">
+                    <div class="w-12 h-12 bg-brand-orange/10 flex items-center justify-center rounded-2xl text-brand-orange">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2a2.5 2.5 0 002.5-2.5V14a2 2 0 002-2V7a2 2 0 00-2-2H18a2 2 0 01-2-2v-.065m-2-1.935A11.016 11.016 0 0011 2a11 11 0 00-8 3.935"></path></svg>
+                    </div>
+                    <h3 class="serif-title text-2xl font-semibold text-brand-dark">Свобода</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Больше уникальных путешествий, ярких впечатлений и личного свободного времени.</p>
+                </div>
+
+                <div class="bg-brand-milky p-8 rounded-3xl text-left space-y-4 hover:shadow-md transition duration-300 border border-brand-beige">
+                    <div class="w-12 h-12 bg-brand-orange/10 flex items-center justify-center rounded-2xl text-brand-orange">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="serif-title text-2xl font-semibold text-brand-dark">Дополнительный доход</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Возможность развивать перспективное направление в комфортном и удобном для вас темпе.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 3. For whom EasyLife Opportunities is created -->
+    <section id="for-whom" class="py-24 px-6 md:px-12 bg-brand-milky relative">
+        <div class="max-w-7xl mx-auto space-y-16">
+            <div class="text-center space-y-4">
+                <h2 class="serif-title text-4xl md:text-5xl font-semibold text-brand-dark">Возможно, вы узнаете здесь себя</h2>
+                <p class="text-gray-500 max-w-lg mx-auto">Мы создали систему, подходящую для разных жизненных сценариев</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-brand-beige shadow-sm space-y-3">
+                    <span class="text-brand-orange font-bold text-lg">01</span>
+                    <h4 class="font-semibold text-brand-dark text-lg">Вы работаете в сфере здоровья или красоты</h4>
+                    <p class="text-sm text-gray-500">Нутрициология, wellness, медицина, спорт, косметология, beauty или активная работа с людьми.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-brand-beige shadow-sm space-y-3">
+                    <span class="text-brand-orange font-bold text-lg">02</span>
+                    <h4 class="font-semibold text-brand-dark text-lg">Вы не связаны с wellness, но открыты новому</h4>
+                    <p class="text-sm text-gray-500">Не обязательно быть экспертом в теме. Важно лишь желание учиться и развиваться.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-brand-beige shadow-sm space-y-3">
+                    <span class="text-brand-orange font-bold text-lg">03</span>
+                    <h4 class="font-semibold text-brand-dark text-lg">Вы хотите путешествовать чаще</h4>
+                    <p class="text-sm text-gray-500">Но не готовы каждый раз переплачивать за круизы, отели и стандартные путевки туроператоров.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-3xl border border-brand-beige shadow-sm space-y-3">
+                    <span class="text-brand-orange font-bold text-lg">04</span>
+                    <h4 class="font-semibold text-brand-dark text-lg">Вы ищете дополнительный доход</h4>
+                    <p class="text-sm text-gray-500">Уверенный финансовый инструмент без необходимости сразу же оставлять вашу основную работу.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-white p-8 rounded-3xl border border-brand-beige shadow-sm space-y-3">
+                    <span class="text-brand-orange font-bold text-lg">05</span>
+                    <h4 class="font-semibold text-brand-dark text-lg">Вы хотите работать онлайн</h4>
+                    <p class="text-sm text-gray-500">Эффективно используя всего несколько свободных часов в неделю из любой точки мира.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-white p-8 rounded-3xl border border-brand-beige shadow-sm space-y-3">
+                    <span class="text-brand-orange font-bold text-lg">06</span>
+                    <h4 class="font-semibold text-brand-dark text-lg">Вы ищете своё направление</h4>
+                    <p class="text-sm text-gray-500">Но пока не понимаете до конца, какой формат и сфера подойдут именно вашей личности.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 4. Key Choice Block (Health & Travel) -->
+    <section id="directions" class="py-24 px-6 md:px-12 bg-white relative">
+        <div class="max-w-7xl mx-auto space-y-16">
+            <div class="text-center space-y-4">
+                <h2 class="serif-title text-4xl md:text-5xl font-semibold text-brand-dark">Выбери направление, которое ближе именно тебе</h2>
+                <p class="text-gray-500 text-lg max-w-xl mx-auto font-medium">Два разных пути. Одна общая цель — больше возможностей для гармоничной жизни.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Direction: HEALTH -->
+                <div class="group relative rounded-[2.5rem] bg-health-sage/30 overflow-hidden border border-health-green/20 flex flex-col justify-between transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl">
+                    <div class="p-8 md:p-12 space-y-6">
+                        <div class="flex justify-between items-start">
+                            <span class="text-health-darkGreen font-semibold uppercase tracking-widest text-xs">HEALTH & WELLNESS</span>
+                            <span class="bg-health-green/20 text-health-darkGreen px-4 py-1.5 rounded-full text-xs font-semibold">Здоровье & Баланс</span>
+                        </div>
+                        <h3 class="serif-title text-3xl md:text-4xl font-bold text-brand-dark">Health & Wellness</h3>
+                        <p class="text-sm text-brand-graphite leading-relaxed">
+                            Это направление создано для нутрициологов, тренеров, врачей, косметологов, экспертов здорового образа жизни и тех, кто хочет чувствовать энергию и улучшать самочувствие.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-center gap-3">
+                                <svg class="w-4 h-4 text-health-darkGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Развитие в востребованной wellness-сфере
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <svg class="w-4 h-4 text-health-darkGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Системное международное обучение и поддержка
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <svg class="w-4 h-4 text-health-darkGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Комфортный онлайн-формат и интеграция в жизнь
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-8 pb-8 md:px-12 md:pb-12">
+                        <div class="h-56 rounded-3xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Wellness aesthetic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <a href="https://arnoldovna87-collab.github.io/EasyLife_Opportunities_HEALTH/" onclick="trackEvent('click_health')" class="block w-full text-center bg-health-darkGreen hover:bg-[#586955] text-white py-4 rounded-2xl font-semibold transition duration-300 shadow-md">
+                            Перейти в Health
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Direction: TRAVEL -->
+                <div class="group relative rounded-[2.5rem] bg-travel-sky/30 overflow-hidden border border-travel-slate/20 flex flex-col justify-between transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl">
+                    <div class="p-8 md:p-12 space-y-6">
+                        <div class="flex justify-between items-start">
+                            <span class="text-travel-blue font-semibold uppercase tracking-widest text-xs">TRAVEL & CRUISES</span>
+                            <span class="bg-travel-sky text-travel-blue px-4 py-1.5 rounded-full text-xs font-semibold">Путешествия & Мечты</span>
+                        </div>
+                        <h3 class="serif-title text-3xl md:text-4xl font-bold text-brand-dark">Travel & Cruises</h3>
+                        <p class="text-sm text-brand-graphite leading-relaxed">
+                            Возможности для тех, кто влюблен в путешествия. Вы сможете получить привилегии закрытого круизного клуба, путешествовать выгоднее и запустить доход в сфере туризма.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-center gap-3">
+                                <svg class="w-4 h-4 text-travel-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Клубные условия и выгода на круизы и отели
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <svg class="w-4 h-4 text-travel-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Активное вдохновляющее сообщество
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <svg class="w-4 h-4 text-travel-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Международное партнерское направление
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-8 pb-8 md:px-12 md:pb-12">
+                        <div class="h-56 rounded-3xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80" alt="Travel and cruise" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <a href="https://arnoldovna87-collab.github.io/EasyLife_Opportunities_TRAVEL/" onclick="trackEvent('click_travel')" class="block w-full text-center bg-travel-blue hover:bg-[#1a3447] text-white py-4 rounded-2xl font-semibold transition duration-300 shadow-md">
+                            Перейти в Travel
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 5. No need to choose forever -->
+    <section class="py-20 px-6 md:px-12 bg-brand-milky relative overflow-hidden">
+        <div class="absolute -top-10 -left-10 w-64 h-64 bg-brand-peach/20 rounded-full blur-3xl"></div>
+        <div class="max-w-4xl mx-auto text-center space-y-8 relative z-10">
+            <h3 class="serif-title text-3xl md:text-4xl font-semibold text-brand-dark">Необязательно сразу знать, что подходит именно вам</h3>
+            <p class="text-base md:text-lg text-brand-graphite max-w-2xl mx-auto">
+                Можно познакомиться с обоими направлениями детально, задать любые вопросы лично и только потом принять взвешенное решение. EasyLife Opportunities — не про давление. Это про новые перспективы и свободу выбора.
+            </p>
+            <div>
+                <button onclick="openChatBot(); trackEvent('open_chatbot')" class="bg-brand-orange hover:bg-brand-orangeHover text-white px-8 py-4 rounded-2xl text-base font-semibold transition duration-300 shadow-md inline-flex items-center gap-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    Помочь мне выбрать
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 6. About the Founder (Заменено на вашу фотографию) -->
+    <section id="founder" class="py-24 px-6 md:px-12 bg-white relative">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 flex justify-center relative">
+                <div class="relative w-full max-w-sm h-[480px] rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-[#F7F3ED]">
+                    <!-- Ваша загруженная фотография основательницы -->
+                    <img src="image.png_202607071236.jpeg" alt="Наталья — основатель" class="w-full h-full object-cover">
+                </div>
+                <!-- Orange light accent -->
+                <div class="absolute -bottom-6 -left-6 bg-brand-orange text-white p-6 rounded-2xl shadow-lg">
+                    <p class="font-bold text-lg">Наталья</p>
+                    <p class="text-xs text-brand-beige">Основатель EasyLife Portugal <br>и EasyLife Opportunities</p>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-7 space-y-6 text-left">
+                <span class="text-brand-orange font-bold uppercase tracking-widest text-xs">Основатель проекта</span>
+                <h2 class="serif-title text-4xl md:text-5xl font-semibold text-brand-dark">Кто стоит за EasyLife Opportunities</h2>
+                <div class="h-1 w-16 bg-brand-orange rounded-full"></div>
+                <div class="space-y-4 text-brand-graphite text-base md:text-lg leading-relaxed">
+                    <p>Меня зовут Наталья. Я основатель EasyLife Portugal и EasyLife Opportunities.</p>
+                    <p>Много лет я работаю с людьми, бизнесом, релокацией и поиском практических решений. Я вижу, как часто люди хотят изменить качество своей жизни, но не понимают, с чего начать и каким возможностям можно доверять.</p>
+                    <p>EasyLife Opportunities создан как пространство, где можно комфортно познакомиться с направлениями, получить честную информацию и выбрать то, что подходит именно вам.</p>
+                </div>
+                <div class="p-4 bg-brand-milky border-l-4 border-brand-orange rounded-r-xl">
+                    <p class="text-sm text-brand-graphite italic">«Я не обещаю легких денег. Я показываю инструменты и возможности, которые можно изучить, проверить и встроить в свою повседневную жизнь».</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 7. Trust Block -->
+    <section class="py-24 px-6 md:px-12 bg-brand-milky relative">
+        <div class="max-w-7xl mx-auto space-y-16">
+            <div class="text-center space-y-4">
+                <h2 class="serif-title text-4xl md:text-5xl font-semibold text-brand-dark">Почему EasyLife Opportunities</h2>
+                <div class="h-1 w-20 bg-brand-orange mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Point 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition duration-300 space-y-4 border border-brand-beige">
+                    <div class="w-10 h-10 bg-brand-peach/10 flex items-center justify-center rounded-xl text-brand-orange">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-semibold text-brand-dark text-lg">Понятная подача</h4>
+                    <p class="text-sm text-gray-500">Без перегруженных терминов, скрытых условий и сложных презентаций.</p>
+                </div>
+                <!-- Point 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition duration-300 space-y-4 border border-brand-beige">
+                    <div class="w-10 h-10 bg-brand-peach/10 flex items-center justify-center rounded-xl text-brand-orange">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6z"></path></svg>
+                    </div>
+                    <h4 class="font-semibold text-brand-dark text-lg">Разные направления</h4>
+                    <p class="text-sm text-gray-500">Можно выбрать то, что гармонично соответствует именно вашим интересам.</p>
+                </div>
+                <!-- Point 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition duration-300 space-y-4 border border-brand-beige">
+                    <div class="w-10 h-10 bg-brand-peach/10 flex items-center justify-center rounded-xl text-brand-orange">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-semibold text-brand-dark text-lg">Можно совмещать</h4>
+                    <p class="text-sm text-gray-500">Необязательно бросать текущее дело или менять привычный уклад.</p>
+                </div>
+                <!-- Point 4 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition duration-300 space-y-4 border border-brand-beige">
+                    <div class="w-10 h-10 bg-brand-peach/10 flex items-center justify-center rounded-xl text-brand-orange">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <h4 class="font-semibold text-brand-dark text-lg">Личный контакт</h4>
+                    <p class="text-sm text-gray-500">Возможность задать любой вопрос и получить поддержку в процессе.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 8. Feedback Form -->
+    <section id="feedback" class="py-24 px-6 md:px-12 bg-white relative">
+        <div class="max-w-4xl mx-auto bg-brand-milky rounded-[2.5rem] p-8 md:p-16 border border-brand-beige shadow-xl">
+            <div class="text-center space-y-4 mb-10">
+                <h3 class="serif-title text-3xl md:text-4xl font-semibold text-brand-dark">Остались вопросы?</h3>
+                <p class="text-gray-500 text-sm md:text-base">Оставьте ваши контакты, и мы поможем разобраться, какое направление подходит именно вам.</p>
+            </div>
+
+            <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-brand-graphite mb-2" for="formName">Имя *</label>
+                        <input class="w-full bg-white border border-brand-beige rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange" type="text" id="formName" required placeholder="Ваше имя">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-brand-graphite mb-2" for="formContact">Телефон или Telegram *</label>
+                        <input class="w-full bg-white border border-brand-beige rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange" type="text" id="formContact" required placeholder="@username или +351...">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-brand-graphite mb-2" for="formDirection">Интересующее направление</label>
+                    <select class="w-full bg-white border border-brand-beige rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange" id="formDirection">
+                        <option value="Не выбрано">Выберите вариант</option>
+                        <option value="Health & Wellness">Health & Wellness</option>
+                        <option value="Travel & Cruises">Travel & Cruises</option>
+                        <option value="Оба направления">Оба направления</option>
+                        <option value="Пока не знаю">Пока не знаю</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-brand-graphite mb-2" for="formMessage">Сообщение</label>
+                    <textarea class="w-full bg-white border border-brand-beige rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange h-32" id="formMessage" placeholder="Ваш вопрос или комментарий"></textarea>
+                </div>
+
+                <!-- GDPR Agreement -->
+                <div class="flex items-start gap-3">
+                    <input class="mt-1 accent-brand-orange" type="checkbox" id="formGdpr" required>
+                    <label class="text-xs text-gray-500 leading-relaxed" for="formGdpr">
+                        Я соглашаюсь на обработку предоставленных персональных данных для осуществления обратной связи в соответствии с правилами GDPR.
+                    </label>
+                </div>
+
+                <div>
+                    <button type="submit" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-white py-4 rounded-xl font-semibold transition duration-300 shadow-md">
+                        Получить информацию
+                    </button>
+                </div>
+            </form>
+            <div id="formSuccessMessage" class="hidden text-center text-green-600 font-semibold mt-6">
+                Спасибо! Ваш запрос успешно отправлен. Мы свяжемся с вами в ближайшее время.
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 9. Final Call to Action -->
+    <section class="py-24 px-6 md:px-12 bg-gradient-to-t from-brand-beige to-[#F7F3ED] text-center relative">
+        <div class="max-w-3xl mx-auto space-y-8">
+            <h2 class="serif-title text-4xl md:text-5xl font-semibold text-brand-dark">Иногда новое начинается с одного выбора</h2>
+            <p class="text-base md:text-lg text-brand-graphite">Выберите направление, которое откликается вам больше всего. Изучите информацию. Задайте вопросы. Решение всегда остается только за вами.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://arnoldovna87-collab.github.io/EasyLife_Opportunities_HEALTH/" onclick="trackEvent('click_health')" class="bg-health-darkGreen hover:bg-[#586955] text-white px-8 py-4 rounded-2xl font-semibold transition duration-300 shadow-md">
+                    Выбрать Health
+                </a>
+                <a href="https://arnoldovna87-collab.github.io/EasyLife_Opportunities_TRAVEL/" onclick="trackEvent('click_travel')" class="bg-travel-blue hover:bg-[#1a3447] text-white px-8 py-4 rounded-2xl font-semibold transition duration-300 shadow-md">
+                    Выбрать Travel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-gray-400 py-16 px-6 md:px-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
+            <div class="md:col-span-5 space-y-4">
+                <div class="flex flex-col">
+                    <span class="text-white text-2xl font-bold tracking-wider uppercase">EasyLife</span>
+                    <span class="text-brand-orange text-xs tracking-widest uppercase -mt-1">Opportunities</span>
+                </div>
+                <p class="text-sm max-w-sm">Возможности для здоровой и свободной жизни, запоминающихся путешествий и гармоничного развития.</p>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Навигация</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="https://arnoldovna87-collab.github.io/EasyLife_Opportunities_HEALTH/" class="hover:text-white transition">Направление Health</a></li>
+                    <li><a href="https://arnoldovna87-collab.github.io/EasyLife_Opportunities_TRAVEL/" class="hover:text-white transition">Направление Travel</a></li>
+                    <li><a href="#about" class="hover:text-white transition">О проекте</a></li>
+                    <li><a href="#feedback" class="hover:text-white transition">Задать вопрос</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Контакты и Сообщества</h4>
+                <div class="flex gap-4">
+                    <!-- Instagram -->
+                    <a href="https://instagram.com" onclick="trackEvent('click_instagram')" class="w-10 h-10 bg-gray-800 flex items-center justify-center rounded-xl text-white hover:bg-brand-orange transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <!-- Telegram -->
+                    <a href="https://t.me" onclick="trackEvent('click_telegram')" class="w-10 h-10 bg-gray-800 flex items-center justify-center rounded-xl text-white hover:bg-brand-orange transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.18l-1.93 9.08c-.14.63-.52.79-1.05.49l-2.94-2.17-1.42 1.37c-.16.16-.29.29-.59.29l.21-3.01 5.48-4.95c.24-.21-.05-.33-.37-.12l-6.78 4.27-2.92-.91c-.64-.2-.65-.64.13-.94l11.39-4.39c.53-.19 1 .13.82.91z"/></svg>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me" onclick="trackEvent('click_whatsapp')" class="w-10 h-10 bg-gray-800 flex items-center justify-center rounded-xl text-white hover:bg-brand-orange transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.454L0 24zm6.59-4.846c1.6.95 3.18 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.023-5.117-2.887-6.981-1.864-1.865-4.343-2.891-6.983-2.893-5.441 0-9.865 4.422-9.869 9.866-.001 1.702.449 3.366 1.303 4.854L1.921 22.08l4.726-1.241z"/></svg>
+                    </a>
+                </div>
+                <p class="text-xs">Email: <a href="mailto:info@easylifeopportunities.com" class="hover:text-white transition">info@easylifeopportunities.com</a></p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 border-t border-gray-800 text-xs space-y-4">
+            <p class="leading-relaxed">
+                <strong class="text-gray-300">Дисклеймер:</strong> Информация на сайте предоставляется исключительно в ознакомительных целях. Личные результаты зависят от вашей активности, выбранного направления, времени и усилий. Сайт не гарантирует получение фиксированного или моментального дохода.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-between gap-4 text-gray-500">
+                <p>© 2026 EasyLife Opportunities. Все права защищены.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition">Политика конфиденциальности</a>
+                    <a href="#" class="hover:text-white transition">Согласие на обработку данных</a>
+                    <a href="#" class="hover:text-white transition">GDPR Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ============================================== -->
+    <!--  INLINE CHATBOT WIDGET DEVELOPMENT             -->
+    <!-- ============================================== -->
+
+    <!-- Floating Chatbot Toggle Button -->
+    <button id="chatBotToggle" onclick="toggleChatBot()" class="fixed bottom-6 right-6 z-50 bg-brand-orange hover:bg-brand-orangeHover text-white p-4 rounded-full shadow-2xl transition duration-300 transform hover:scale-110 flex items-center justify-center gap-2 group">
+        <!-- Badge count -->
+        <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-red-500 rounded-full border-2 border-white"></span>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-out text-sm font-semibold whitespace-nowrap">Есть вопрос? Напишите мне</span>
+    </button>
+
+    <!-- ChatBot Container Window -->
+    <div id="chatBotContainer" class="hidden fixed bottom-24 right-6 w-96 max-w-[calc(100vw-3rem)] h-[550px] bg-white rounded-3xl shadow-2xl z-50 border border-brand-beige flex flex-col overflow-hidden transition-all duration-300">
+        <!-- Header -->
+        <div class="bg-brand-dark p-4 text-white flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <div class="w-10 h-10 rounded-full bg-brand-orange flex items-center justify-center font-bold text-sm">EL</div>
+                    <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></span>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm leading-none">EasyLife Ассистент</h4>
+                    <span class="text-[10px] text-gray-400">Онлайн-консультант</span>
+                </div>
+            </div>
+            <button onclick="toggleChatBot()" class="text-gray-400 hover:text-white transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+        <!-- Dialogue History -->
+        <div id="chatBotHistory" class="flex-1 p-4 overflow-y-auto space-y-4 bg-brand-milky">
+            <!-- Bot message example -->
+            <div class="flex items-start gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center text-white text-xs font-bold shrink-0">EL</div>
+                <div class="bg-white p-3.5 rounded-2xl rounded-tl-none shadow-sm text-sm text-brand-dark max-w-[80%] leading-relaxed">
+                    Здравствуйте! Рада приветствовать вас. Я помогу вам сориентироваться в возможностях EasyLife Opportunities. Какое направление вам ближе?
+                </div>
+            </div>
+        </div>
+
+        <!-- Contextual Active Options -->
+        <div id="chatBotOptions" class="p-4 bg-white border-t border-brand-beige flex flex-wrap gap-2">
+            <button onclick="selectBotOption('Health')" class="bg-health-sage text-health-darkGreen hover:bg-health-green/20 px-4 py-2.5 rounded-xl text-xs font-semibold transition">Здоровье и wellness</button>
+            <button onclick="selectBotOption('Travel')" class="bg-travel-sky text-travel-blue hover:bg-travel-slate/20 px-4 py-2.5 rounded-xl text-xs font-semibold transition">Путешествия и круизы</button>
+            <button onclick="selectBotOption('Income')" class="bg-brand-milky text-brand-orange border border-brand-orange/30 hover:bg-brand-orange/10 px-4 py-2.5 rounded-xl text-xs font-semibold transition">Дополнительный доход</button>
+            <button onclick="selectBotOption('Unsure')" class="bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2.5 rounded-xl text-xs font-semibold transition">Пока не знаю</button>
+        </div>
+
+        <!-- Direct user message text input footer -->
+        <div id="chatBotInputContainer" class="hidden p-3 bg-white border-t border-brand-beige flex items-center gap-2">
+            <input type="text" id="chatBotManualInput" class="flex-1 px-3 py-2 border border-brand-beige rounded-xl text-xs focus:outline-none focus:border-brand-orange" placeholder="Напишите вопрос...">
+            <button onclick="sendManualMessage()" class="bg-brand-orange hover:bg-brand-orangeHover text-white p-2 rounded-xl transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Analytics and Bot API Logic script -->
+    <script>
+        // Bot Credentials
+        const BOT_TOKEN = "8483273720:AAEj2NvFYXuXInFNg3UGL_35sTEjvgBgOrQ";
+        const BOT_CHAT_ID = "6440427082";
+
+        // Global Analytics Event Helper (Matches requested parameters)
+        function trackEvent(eventName, eventParams = {}) {
+            console.log(`[Analytics Tracked]: ${eventName}`, eventParams);
+            if (typeof dataLayer !== 'undefined') {
+                dataLayer.push({ 'event': eventName, ...eventParams });
+            }
+            if (typeof fbq !== 'undefined') {
+                fbq('trackCustom', eventName, eventParams);
+            }
+        }
+
+        // Toggle Chat Window
+        function toggleChatBot() {
+            const chat = document.getElementById('chatBotContainer');
+            chat.classList.toggle('hidden');
+            trackEvent('open_chatbot');
+        }
+
+        // Open Chat Window
+        function openChatBot() {
+            const chat = document.getElementById('chatBotContainer');
+            chat.classList.remove('hidden');
+            chat.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Send Lead data directly to Natalia via Telegram Bot Endpoint
+        async function sendTelegramNotification(text) {
+            const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+            try {
+                await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: BOT_CHAT_ID,
+                        text: text,
+                        parse_mode: 'HTML'
+                    })
+                });
+            } catch (err) {
+                console.error("Telegram notification error:", err);
+            }
+        }
+
+        // Dialogue Step Tracker
+        let currentStep = 'welcome';
+        let userSelectedTopic = '';
+
+        function appendUserMessage(text) {
+            const history = document.getElementById('chatBotHistory');
+            const userMsg = document.createElement('div');
+            userMsg.className = 'flex items-start gap-2.5 justify-end';
+            userMsg.innerHTML = `
+                <div class="bg-brand-orange text-white p-3.5 rounded-2xl rounded-tr-none shadow-sm text-sm max-w-[80%] leading-relaxed">
+                    ${text}
+                </div>
+            `;
+            history.appendChild(userMsg);
+            history.scrollTop = history.scrollHeight;
+        }
+
+        function appendBotMessage(text) {
+            const history = document.getElementById('chatBotHistory');
+            const botMsg = document.createElement('div');
+            botMsg.className = 'flex items-start gap-2.5';
+            botMsg.innerHTML = `
+                <div class="w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center text-white text-xs font-bold shrink-0">EL</div>
+                <div class="bg-white p-3.5 rounded-2xl rounded-tl-none shadow-sm text-sm text-brand-dark max-w-[80%] leading-relaxed">
+                    ${text}
+                </div>
+            `;
+            history.appendChild(botMsg);
+            history.scrollTop = history.scrollHeight;
+        }
+
+        // Main bot conversational core
+        function selectBotOption(option) {
+            const optionsBlock = document.getElementById('chatBotOptions');
+
+            if (option === 'Health') {
+                userSelectedTopic = 'Health & Wellness';
+                appendUserMessage('Интересует Здоровье и wellness');
+                setTimeout(() => {
+                    appendBotMessage('Отличный выбор! Вы уже являетесь практикующим экспертом в сфере здоровья, красоты, нутрициологии (или смежной области)?');
+                    optionsBlock.innerHTML = `
+                        <button onclick="selectBotOption('Health_Expert')" class="bg-health-sage text-health-darkGreen hover:bg-health-green/20 px-4 py-2 rounded-xl text-xs font-semibold">Да, я эксперт</button>
+                        <button onclick="selectBotOption('Health_Adjacent')" class="bg-health-sage text-health-darkGreen hover:bg-health-green/20 px-4 py-2 rounded-xl text-xs font-semibold">Работаю в смежной сфере</button>
+                        <button onclick="selectBotOption('Health_Interested')" class="bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2 rounded-xl text-xs font-semibold">Нет, но мне интересно</button>
+                    `;
+                }, 800);
+            } 
+            else if (option === 'Travel') {
+                userSelectedTopic = 'Travel & Cruises';
+                appendUserMessage('Интересуют Путешествия и круизы');
+                setTimeout(() => {
+                    appendBotMessage('Что привлекает вас больше всего в данном направлении?');
+                    optionsBlock.innerHTML = `
+                        <button onclick="selectBotOption('Travel_Save')" class="bg-travel-sky text-travel-blue hover:bg-travel-slate/20 px-4 py-2 rounded-xl text-xs font-semibold">Путешествовать выгоднее</button>
+                        <button onclick="selectBotOption('Travel_Club')" class="bg-travel-sky text-travel-blue hover:bg-travel-slate/20 px-4 py-2 rounded-xl text-xs font-semibold">Узнать о круизном клубе</button>
+                        <button onclick="selectBotOption('Travel_Income')" class="bg-brand-milky text-brand-orange border border-brand-orange/30 hover:bg-brand-orange/10 px-4 py-2 rounded-xl text-xs font-semibold">Дополнительный доход</button>
+                        <button onclick="selectBotOption('Travel_All')" class="bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2 rounded-xl text-xs font-semibold">Всё сразу</button>
+                    `;
+                }, 800);
+            } 
+            else if (option === 'Income' || option === 'Unsure') {
+                userSelectedTopic = option === 'Income' ? 'Дополнительный доход' : 'Пока не определился';
+                appendUserMessage(option === 'Income' ? 'Интересует Дополнительный доход' : 'Я пока не знаю');
+                setTimeout(() => {
+                    appendBotMessage('Это абсолютно нормально! Начнем с малого. С какого мессенджера вам будет удобнее получать информацию и пообщаться с Натальей?');
+                    showContactSourcingOptions();
+                }, 800);
+            }
+            // Branch Sub-options: Health Answers
+            else if (option.startsWith('Health_')) {
+                appendUserMessage('Выбран уровень вовлеченности в Health');
+                setTimeout(() => {
+                    appendBotMessage('Поняла вас. Вы можете подробно изучить это направление на нашей детальной странице: <br><br><a href="https://arnoldovna87-collab.github.io/EasyLife_Opportunities_HEALTH/" class="text-brand-orange font-bold underline">Узнать подробнее о Health</a><br><br>Оставьте ваш контакт, чтобы мы прислали полезные вводные материалы.');
+                    showContactSourcingOptions();
+                }, 800);
+            }
+            // Branch Sub-options: Travel Answers
+            else if (option.startsWith('Travel_')) {
+                appendUserMessage('Выбран интерес в Travel');
+                setTimeout(() => {
+                    appendBotMessage('Прекрасно! Переходите по ссылке для погружения в круизный мир: <br><br><a href="https://arnoldovna87-collab.github.io/EasyLife_Opportunities_TRAVEL/" class="text-brand-orange font-bold underline">Узнать подробнее о Travel</a><br><br>Как мы можем связаться с вами, чтобы рассказать о клубных преимуществах?');
+                    showContactSourcingOptions();
+                }, 800);
+            }
+            // Contact input steps
+            else if (option.startsWith('Contact_')) {
+                const platform = option.split('_')[1];
+                appendUserMessage(`Удобнее общаться через: ${platform}`);
+                setTimeout(() => {
+                    appendBotMessage(`Напишите, пожалуйста, ваше Имя и ник/телефон для связи в ${platform}.`);
+                    optionsBlock.classList.add('hidden');
+                    document.getElementById('chatBotInputContainer').classList.remove('hidden');
+                    currentStep = 'awaiting_contact';
+                }, 800);
+            }
+        }
+
+        function showContactSourcingOptions() {
+            const optionsBlock = document.getElementById('chatBotOptions');
+            optionsBlock.innerHTML = `
+                <button onclick="selectBotOption('Contact_WhatsApp')" class="bg-[#25D366]/20 text-[#128C7E] hover:bg-[#25D366]/30 px-4 py-2 rounded-xl text-xs font-semibold">WhatsApp</button>
+                <button onclick="selectBotOption('Contact_Telegram')" class="bg-[#0088cc]/20 text-[#0088cc] hover:bg-[#0088cc]/30 px-4 py-2 rounded-xl text-xs font-semibold">Telegram</button>
+                <button onclick="selectBotOption('Contact_Instagram')" class="bg-[#C13584]/20 text-[#C13584] hover:bg-[#C13584]/30 px-4 py-2 rounded-xl text-xs font-semibold">Instagram</button>
+                <button onclick="selectBotOption('Contact_Email')" class="bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2 rounded-xl text-xs font-semibold">Email</button>
+            `;
+        }
+
+        // Process manual input inside ChatBot
+        function sendManualMessage() {
+            const input = document.getElementById('chatBotManualInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            appendUserMessage(text);
+            input.value = '';
+
+            if (currentStep === 'awaiting_contact') {
+                setTimeout(async () => {
+                    appendBotMessage('Благодарю вас за предоставленные контактные данные! Мы свяжемся с вами в течение дня для предоставления всей информации.');
+                    document.getElementById('chatBotInputContainer').classList.add('hidden');
+                    
+                    // Track Lead in Analytics
+                    trackEvent('send_lead', { direction: userSelectedTopic, source: 'chatbot' });
+
+                    // Send lead notification to owner Telegram Bot
+                    const messageText = `<b>Новый лид из Чат-бота!</b>\n\n<b>Тема:</b> ${userSelectedTopic}\n<b>Контакты:</b> ${text}`;
+                    await sendTelegramNotification(messageText);
+                }, 1000);
+            } else {
+                setTimeout(() => {
+                    appendBotMessage('Ваше сообщение зафиксировано. Пожалуйста, укажите ваши контактные данные, чтобы основатель или ассистент проекта смогли ответить вам.');
+                }, 1000);
+            }
+        }
+
+        // Process Main Bottom Contact Form
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('formName').value;
+            const contact = document.getElementById('formContact').value;
+            const direction = document.getElementById('formDirection').value;
+            const message = document.getElementById('formMessage').value;
+
+            // Prepare Telegram API message markup
+            const telegramMessage = `
+<b>Новая заявка с Лендинга!</b>
+━━━━━━━━━━━━━━━━━━
+👤 <b>Имя:</b> ${name}
+📞 <b>Контакты:</b> ${contact}
+🎯 <b>Направление:</b> ${direction}
+💬 <b>Сообщение:</b> ${message || 'Без сообщения'}
+            `;
+
+            // Deliver notification to Telegram
+            await sendTelegramNotification(telegramMessage);
+
+            // Trigger Analytics
+            trackEvent('send_lead', { direction: direction, source: 'form' });
+
+            // Show success styling
+            document.getElementById('contactForm').reset();
+            document.getElementById('formSuccessMessage').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('formSuccessMessage').classList.add('hidden');
+            }, 5000);
+        }
+
+        // Keyboard support inside Chatbot manual input
+        document.getElementById('chatBotManualInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendManualMessage();
+            }
+        });
+    </script>
+
+    <!-- ВСТАВИТЬ КОД СТОРОННЕГО ЧАТ-БОТА ЗДЕСЬ (ПРИ НЕОБХОДИМОСТИ) -->
+    <!-- <script src="https://widget.manychat.com/..."></script> -->
+
+</body>
+</html>
